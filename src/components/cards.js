@@ -10,7 +10,9 @@ const Card = ({ gig }) => {
         <View style={styles.row}>
           <Text style={styles.title}>{gig.title}</Text>
           <Image
-            source={require('../../assets/logo.png')}
+            source={{
+              uri: `https://robohash.org/${Math.random()}`
+            }}
             style={styles.logo}
           />
         </View>
@@ -23,7 +25,6 @@ const Card = ({ gig }) => {
     </TouchableOpacity>
   )
 }
-
 
 const styles = StyleSheet.create({
   card: {

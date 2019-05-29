@@ -43,5 +43,11 @@ export default StyleSheet.create({
   whiteText: {
     fontSize: 15,
     fontWeight: '900'
+  },
+  logo: {
+    width: metrics.width * 0.10,
+    height: metrics.width * 0.10,
+    borderRadius: 20,
+    marginTop: 15
   }
 })

@@ -7,8 +7,15 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "apollo-boost": "^0.4.0",
+    "apollo-cache-inmemory": "^1.6.0",
+    "apollo-client": "^2.6.0",
+    "apollo-link-http": "^1.5.14",
     "expo": "^32.0.0",
+    "graphql": "^14.3.1",
+    "graphql-tag": "^2.10.1",
     "react": "16.5.0",
+    "react-apollo": "^2.5.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-scrollable-tab-view": "^0.10.0",
     "react-native-timeago": "^0.4.0",
