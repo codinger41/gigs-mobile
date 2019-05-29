@@ -1,11 +1,18 @@
 import React from 'react';
 import TimeAgo from 'react-native-timeago';
+import { withNavigation } from 'react-navigation';
 import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
 import metrics from '../utils/metrics';
 
-const Card = ({ gig }) => {
+const Card = ({ gig, navigation }) => {
   return (
-    <TouchableOpacity activeOpacity={0.7} style={styles.card}>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      style={styles.card}
+      onPress={() => {
+        navigation.navigate('SingleGig', { gig })
+      }}
+    >
       <View>
         <View style={styles.row}>
           <Text style={styles.title}>{gig.title}</Text>
@@ -84,8 +91,11 @@ const styles = StyleSheet.create({
     marginLeft: metrics.width * 0.7,
     position: 'absolute',
     top: 120
+  },
+  contactText: {
+    fontSize: 15
   }
 });
 
 
-export default Card;
+export default withNavigation(Card);
