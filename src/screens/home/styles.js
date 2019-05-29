@@ -12,7 +12,8 @@ export default StyleSheet.create({
     height: metrics.height * 0.1,
     backgroundColor: '#ffffff',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexDirection: 'row'
   },
   row: {
     flexDirection: 'row',
@@ -49,5 +50,11 @@ export default StyleSheet.create({
     height: metrics.width * 0.10,
     borderRadius: 20,
     marginTop: 15
+  },
+  title: {
+    fontFamily: 'raft',
+    fontSize: 50,
+    marginLeft: 10,
+    marginTop: 12
   }
 })

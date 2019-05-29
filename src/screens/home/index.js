@@ -61,6 +61,7 @@ class Home extends React.Component {
             source={require('../../../assets/logo.png')}
             style={styles.logo}
           />
+          <Text style={styles.title}>Gigs</Text>
         </View>
         <ScrollableTabView renderTabBar={props => this.renderHeader({ ...props })}>
           <ListComponent tabLabel={'All gigs'} />

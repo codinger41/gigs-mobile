@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import { ApolloProvider } from 'react-apollo';
 import Navigator from './src/navigation';
 import { Font } from 'expo';
@@ -25,15 +26,17 @@ class App extends React.Component {
   }
   async componentDidMount() {
     await Font.loadAsync({
-      Raphtalia: require('./assets/Raphtalia.otf'),
+      'raft': require('./assets/Raphtalia.otf'),
     });
     this.setState({ fontLoaded: true });
   }
 
   render() {
+    const { state: { fontLoaded } } = this;
+
     return (
       <ApolloProvider client={client}>
-        <Navigator />
+        { fontLoaded ? <Navigator /> : <View /> }
       </ApolloProvider>
     )
   }
