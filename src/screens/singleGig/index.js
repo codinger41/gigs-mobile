@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, Linking } from 'react-native';
+import { Content } from 'native-base';
 import { Ionicons, MaterialIcons, FontAwesome } from '@expo/vector-icons'
 import TimeAgo from 'react-native-timeago';
 import styles from './styles';
@@ -17,7 +18,7 @@ const SingleGig = (props) => {
     }
   } = props;
   return (
-    <View style={styles.container}>
+    <Content style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity
           style={styles.backButton}
@@ -80,7 +81,7 @@ const SingleGig = (props) => {
         />
         <Text style={styles.contactText}>Contact by phone</Text>
       </TouchableOpacity>
-    </View>
+    </Content>
   )
 };
 

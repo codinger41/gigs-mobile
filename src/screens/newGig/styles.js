@@ -19,7 +19,7 @@ export default StyleSheet.create({
     justifyContent: 'center'
   },
   titleText: {
-    fontSize: 40,
+    fontSize: 20,
     marginLeft: metrics.width * 0.03,
     fontWeight: 'bold'
   },
@@ -54,8 +54,14 @@ export default StyleSheet.create({
     color: 'grey',
     width: metrics.width * 0.98,
     fontSize: 17,
-    marginHorizontal: metrics.width * 0.03,
-    lineHeight: 25,
+    marginHorizontal: metrics.width * 0.037,
+  },
+  description2: {
+    color: 'grey',
+    width: metrics.width * 0.98,
+    fontSize: 17,
+    marginHorizontal: metrics.width * 0.037,
+    marginTop: 20
   },
   boxRow: {
     width: metrics.width * 0.92,
@@ -95,15 +101,22 @@ export default StyleSheet.create({
     width: metrics.width * 0.92,
     height: metrics.height * 0.1,
     borderRadius: 10,
+    backgroundColor: '#e67e22',
     marginTop: 10,
-    borderColor: 'grey',
-    borderWidth: 1,
     alignSelf: 'center',
-    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center'
   },
-  contactText: {
-    marginLeft: 10
+  buttonText: {
+    color: '#ffffff',
+    fontSize: 18
+  },
+  itemStyle: {
+    marginLeft: 20,
+    marginTop: 10
+  },
+  itemStyleSelected: {
+
   }
 });
 

@@ -5,7 +5,9 @@ import { graphql, Mutation, Query } from 'react-apollo';
 import styles from './styles';
 import Card from '../../components/cards';
 import { getGigsQuery } from '../../graphql/queries';
-
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Ionicons from '@expo/vector-icons/Ionicons'
+import ActionButton from 'react-native-action-button';
 
 const ListComponent = graphql(getGigsQuery)(props => {
   const { error, getAllGigs } = props.data;
@@ -67,6 +69,10 @@ class Home extends React.Component {
           <ListComponent tabLabel={'All gigs'} />
           <ListComponent tabLabel={'Current gigs'} />
         </ScrollableTabView>
+        <ActionButton buttonColor="rgba(231,76,60,1)"
+          onPress={() => this.props.navigation.navigate('NewGig')}
+        >
+        </ActionButton>
       </View>
     )
   }

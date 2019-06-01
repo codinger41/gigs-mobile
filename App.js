@@ -3,13 +3,14 @@ import { View } from 'react-native';
 import { ApolloProvider } from 'react-apollo';
 import Navigator from './src/navigation';
 import { Font } from 'expo';
+import { Root } from 'native-base';
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri: 'https://gigs-api.herokuapp.com/graphql'
+  uri: 'http://127.0.0.1:5000/graphql'
 });
 
 const client = new ApolloClient({
@@ -36,7 +37,9 @@ class App extends React.Component {
 
     return (
       <ApolloProvider client={client}>
-        { fontLoaded ? <Navigator /> : <View /> }
+        <Root>
+          { fontLoaded ? <Navigator /> : <View /> }
+        </Root>
       </ApolloProvider>
     )
   }
