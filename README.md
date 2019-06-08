@@ -1,6 +1,5 @@
 #  Gigs Mobile
-Gigs is an app that helps people find gigs.
-================================
+Gigs is an app that helps people find gigs. <br/>
 
 This project was built with React.js and Apollo graphql client. <br/>
 
