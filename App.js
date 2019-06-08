@@ -10,7 +10,7 @@ import { HttpLink } from 'apollo-link-http';
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri: 'http://127.0.0.1:5000/graphql'
+  uri: 'https://gigs-api.herokuapp.com/graphql'
 });
 
 const client = new ApolloClient({
