@@ -6,6 +6,7 @@ This project was built with React.js and Apollo graphql client.
 ================================
 Backend is here: https://github.com/leksyib/gigs-backend
 
+**Live app is here :** https://exp.host/@leksyib/gigs
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 ## :arrow_up: How to Setup
