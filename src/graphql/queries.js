@@ -1,11 +1,8 @@
 import gql from 'graphql-tag';
 
 export const getGigsQuery = gql`
-  query {
-    getAllGigs(
-      limit: 5,
-      offset: 0
-    ) {
+  query getGigsMutation ($location: String!) {
+    getAllGigs (location: $location) {
       gigs {
         id
         contactName
@@ -30,8 +27,7 @@ export const createGig = gql`
     $location: String!,
     $price: String!,
     $contactEmail: String!,
-    $contactPhone: String!,
-    $category: String!
+    $contactPhone: String!
   ) {
     createGig(
       title: $title,
@@ -40,13 +36,11 @@ export const createGig = gql`
       contactPhone: $contactPhone,
       price: $price,
       description: $description,
-      location: $location,
-      category: $category
+      location: $location
     ) {
       gig {
         title
         location
-        category
         contactName
         contactPhone
         description

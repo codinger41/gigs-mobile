@@ -56,5 +56,11 @@ export default StyleSheet.create({
     fontSize: 50,
     marginLeft: 10,
     marginTop: 12
+  },
+  inputItem: {
+    width: metrics.width * 0.95,
+    alignSelf: 'center',
+    borderRadius: 10,
+    marginBottom: 10
   }
 })

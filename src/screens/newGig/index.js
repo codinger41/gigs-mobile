@@ -1,22 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ActivityIndicator, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { Left, Header, Content, Form, Item, Input, Label, Toast, Body, Right } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
 import { Mutation } from 'react-apollo';
-import { TagSelect } from 'react-native-tag-select'
 import { validateGig } from '../../utils/validator';
 import { createGig } from '../../graphql/queries';
 import styles from './styles';
-import { ScrollView } from 'react-native-gesture-handler';
-
-
-
-const categoryOptions = [
-  { id: 1, label: 'Home' },
-  { id: 2, label: 'Electronics' },
-  { id: 3, label: 'Fashion' },
-  { id: 4, label: 'Others' },
-]
 
 class NewGig extends React.Component {
   state = {
@@ -26,8 +15,7 @@ class NewGig extends React.Component {
     location: null,
     contactName: null,
     contactEmail: null,
-    contactPhone: null,
-    category: null
+    contactPhone: null
   }
 
   runValidator = (createGigAction) => {
@@ -143,21 +131,6 @@ class NewGig extends React.Component {
                     onChangeText={text => this.setState({ contactEmail: text })}
                   />
                 </Item>
-                <Text style={styles.description2}>Select a category for this gig.</Text>
-                <ScrollView horizontal>
-                <TagSelect
-                  data={categoryOptions}
-                  max={1}
-                  onMaxError={() => {
-                    Alert.alert('Ops', 'You can only select 3 tags')
-                  }}
-                  itemStyle={styles.itemStyle}
-                  itemStyleSelected={styles.itemStyleSelected}
-                  itemLabelStyle={styles.label}
-                  value={[]}
-                  onItemPress={value => this.setState({ category: value.label })}
-                />
-                </ScrollView>
               </Form>
               <TouchableOpacity
                 style={styles.buttonContainer}

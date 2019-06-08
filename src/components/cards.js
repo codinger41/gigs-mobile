@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     marginLeft: 10
   },
   timeAgo: {
-    marginLeft: metrics.width * 0.7,
+    marginLeft: metrics.width * 0.65,
     position: 'absolute',
     top: 120
   },
