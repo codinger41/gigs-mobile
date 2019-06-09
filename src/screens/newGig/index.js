@@ -57,9 +57,10 @@ class NewGig extends React.Component {
             })
           }
           return (
-            <View style={styles.container}>
+          <View style={styles.container}>
             <Header
               androidStatusBarColor="#ffffff"
+              style={styles.header}
             >
               <Left>
                 <TouchableOpacity
@@ -84,7 +85,7 @@ class NewGig extends React.Component {
               <Form>
               <Item floatingLabel>
                   <Label>What's your name?</Label>
-                  <Input 
+                  <Input
                     style={{ height: 80 }}
                     onChangeText={text => this.setState({ contactName: text })}
                   />

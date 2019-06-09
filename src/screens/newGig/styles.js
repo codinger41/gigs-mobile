@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import metrics from '../../utils/metrics';
 
 export default StyleSheet.create({
@@ -9,7 +9,13 @@ export default StyleSheet.create({
   header: {
     width: metrics.width,
     height: metrics.height * 0.1,
+    ...Platform.select({
+      android: {
+        marginTop: metrics.height * 0.02,
+      }
+    }),
     backgroundColor: '#ffffff',
+    alignItems: 'center',
     justifyContent: 'center',
   },
   backButton: {
