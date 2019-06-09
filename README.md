@@ -1,12 +1,13 @@
 #  Gigs Mobile
-Gigs is an app that helps people find gigs.
-================================
+Gigs is an app that helps people find gigs. <br/>
 
-This project was built with React.js and Apollo graphql client.
-================================
-Backend is here: https://github.com/leksyib/gigs-backend
+This project was built with React.js and Apollo graphql client. <br/>
+
+**Backend API is here :** https://github.com/leksyib/gigs-backend
 
 **Live app is here :** https://exp.host/@leksyib/gigs
+
+
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 ## :arrow_up: How to Setup
@@ -45,4 +46,4 @@ If you have to bypass lint for a special commit that you will come back and clea
 The linting rules are from JS Standard and React-Standard.  [Regular JS errors can be found with descriptions here](http://eslint.org/docs/rules/), while [React errors and descriptions can be found here](https://github.com/yannickcr/eslint-plugin-react).
 
 ## Screenshot
-<img src"./screenshot.png" />
+[![screebshot](https://github.com/leksyib/gigs-mobile/raw/develop/screenshot.png?raw=true)
